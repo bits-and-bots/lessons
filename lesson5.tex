@@ -1,0 +1,158 @@
+\documentclass{lessonplan}
+
+% Constants
+\newcommand{\lessonNumber}{5}
+\title{Lesson \lessonNumber: The Color Sensor on our Robot}
+\author{\linkHome}
+\date{}
+
+% Buildup
+\setLessonNumber{\lessonNumber}
+
+
+%Document
+\begin{document}
+
+  \maketitle
+
+  \section{Overview}
+    \subsection{Summary}
+      This lesson teaches students how to set the sensors on the robot. For more advanced students, it delves into the using external input to determine behavior.
+    \subsection{Objectives}
+    \begin{itemize}
+      \item Teaching the basics of the color sensor
+      \item (Intermediate) Determining behavior from the color sensor input
+      \item (Advanced) Have color sensing and other behavior at the same time
+    \end{itemize}
+    \subsection{Key Vocabulary Terms}
+    \begin{itemize}
+      \item Sensor
+      \item (Intermediate) Switch
+    \end{itemize}
+    \subsection{Materials}
+      \begin{itemize}
+        \item Standard ev3 brick
+        \item Laptops
+        \item Programming Cables
+        \item Ev3 color sensors
+        \item Demo Program: Senses colors and displays text description of which color is sensed
+      \end{itemize}
+  \section{Procedure}
+    \subsection{Setup (10 minutes)}
+      \paragraph{}
+      Setup robots with color sensors, and computers.
+    \subsection{Introduction (5 minutes)}
+      Describe to students what color sensors are and teach the students what the sensors output by using a loop that will continuously print the display value of the color sensor. 
+    \subsection{Demonstration}
+      Play the demo program.
+    \subsection{Guided Practice Part 1: Teaching the Basics of the Color Sensor}
+    
+        Start by going to the Sensors tab of the block library at the bottom, and grab a Color Sensor block.
+
+        \procedureImage[0.6]{5-9.png}
+      
+        Now grab a Display block from the Action tab and add it after the Color Sensor block. You will have to click on the button in the bottom left corner of the bar to get the menu and change the setting from Image to Text > Pixels.
+      
+        \procedureImage[0.6]{5-13.png}
+      
+        Next, we change the text to print from the default MINDSTORMS to Wired.
+        
+        \procedureImage[0.6]{5-2.png}
+
+        Now, connect the wire from the Color Sensor block to the tab labeled T on the Display block by simply clicking and dragging to the spot.
+        
+        \procedureImage[0.6]{5-12.png}
+        
+        Finally, put it all inside of a loop.
+        
+        \procedureImage[0.6]{5-5.png}
+        
+        You should now have a program that continuously displays a value (it will be an integer between 0 and 7) for the color. We will have the students collectively explore now and try to figure out which number represents which color. They should take the robot and point the sensor around the room at different objects. It only works at about 1 to 2 inches away from the target, so have them get close with the sensors.
+        \par
+        One other thing you can use the color sensor for is measuring how bright a room is. To do this, we will change the setting on the Color Sensor block from Measure > Color to Measure > Ambient Light Intensity. 
+        \par
+        Be sure to reconnect the wire after. Now run this program again. It should output a number between 0 and 100 based on the brightness of the room to the screen. Try putting your hand over the sensor to block the light- the number should drop to a very low number. You can also try turning out the lights and seeing what happens to the numbers. 
+    \subsection{Guided Practice Part 2: Print and Say the Sensed Colors out Loud}
+        The students should now understand the basics of how the sensors work. Now, we will start doing more interesting things.
+        \par
+        First, we will do a quick program where the students will use it to have the robot read the color sensor, and then print out the name of the color to the screen and say it out loud. First, we grab a Switch block, and we set the switch to respond to Color Sensor > Measure > Color. 
+        
+        \procedureImage[0.6]{5-8.png}
+        
+        Now, the students will have to make sure they have exactly one case in their switch block for all color possibilities. They should have 8 cases total: one for No Color, and then one for each of the given colors. Try to have them do all of the colors in the order presented in the menu to avoid confusion.
+        \par
+        Important to note here is that the “No Color” case should be selected as the ‘default’. (The image below shows the radio button that needs to be selected)
+        \par
+        We will add a Display block and a Sound block to each case.
+        \par
+        On the Display block, we change the setting from Image to Text > Pixels, and then click on the MINDSTORMS text in the top right and type in the text for the appropriate color.
+        
+        \procedureImage[0.4]{5-10.png}
+        
+        Go through all 8 of the cases, making sure the text is correct for that case. On the Black case, for instance, the text should say “BLACK”. Have the students test these out to make sure they all work.
+        \par
+        For the Sound block, we will find the appropriate sound file for the color name. In order to do this, click on the white box in the top right, and go to LEGO Sound Files > Colors > [color name]. 
+        
+        \procedureImage[0.6]{5-4.png}
+        
+        Do this for all 8 of the cases. For “No Color”, there is no given file, so you can use the file at LEGO Sound Files > Communication > No as a good substitute, or any other file the kids choose to do. 
+        \par
+        Now let them explore and use this for a little while to test out the colors in the room. Please note that some students have done things like this before last semester and will move through this quickly.
+    \subsection{Guided Practice Part 3: Using the Brightness Sensor}
+        Let’s now learn how to use a new block: the Brick Status Light block. This block should control the lights around the buttons on the main brick of the robot. Start a new program and begin by adding it from the Action tab.
+
+        \procedureImage[0.6]{5-11.png}
+
+        We can control the color of the lights by clicking on the number 1 that is there and selecting whichever option we want: 
+
+        \procedureImage[0.6]{5-7.png}
+
+        Try running the simple program a couple times with the different options to get used to using this block. 
+        \par
+        Now, let’s start making our program use the brightness sensor. Add a Switch block and set it to decide based on Color Sensor > Compare > Ambient Light Intensity. 
+ 
+        \procedureImage[0.5]{5-8.png}
+
+        As shown above, it should display 4 (which represents the less than operator) and a 50 as the defaults, meaning that if the measured ambient light intensity is less than 50, it will do the top case, and if it’s greater than or equal to 50, it will do the bottom case.
+        \par
+        Anything we do in the top case will be executed when the room is dark or if you cover the sensor so that no light gets into it. So, we’re going to make the robot make a noise, then set the brick status light to red if the lights are low. It should make a different noise and set the light to green if it is light out. Add a Display block and a Brick Status Light block to each case and configure them as below (any noise works):
+        
+        \procedureImage[0.5]{5-6.png}
+    \subsection{Guided Practice Part 4: The Nocturnal Robot}
+        Finally, let’s try something a little more complex- we want to write a program that is “nocturnal” - it will sleep when it is light out, and then wake up when it is dark again, and it should respond to each one on a loop.
+        \par
+        When it is light out: the robot should use the Display block to display sleeping eyes (found using the Lego Image Files > Eyes > Sleeping path)
+        \par
+        When it is dark out: the robot should set the eyes to awake and then flash the Brick Status Lights red and green, with a one second pause in between each.
+        \par
+        Here is a summary of the steps:
+        \begin{itemize}
+            \item Start with 2 consecutive loop blocks: set one to end when Color Sensor > Compare > Ambient Light Intensity is below 50, and the other to end when above 50 (you may need to find a different value than 50 if it isn’t very bright in the room to begin with).
+            \item Stick both of those inside an outer loop (so that you can continue switching back and forth
+            \item Add a Display block to the first loop -> set it to Sleeping eyes
+            \item Add a Display block to the second loop -> set it to Awake eyes
+            \item Add two Brick Status Light blocks to the second loop -> set the first to green and the second to red. 
+            \item Add a Brick Status Light block to the first loop -> change the setting to “Off”
+            \item Add a Wait block to the second loop between the Brick Status Light blocks.
+        \end{itemize}
+        
+        Here is the full view:
+        
+        \procedureImage[0.4]{5-14.png}
+        
+        A closer look at the first loop:
+
+        \procedureImage[0.6]{5-15.png}
+        
+        And a closer look at the second:
+
+        \procedureImage[0.6]{5-1.png}
+
+    \subsection{Challenges}
+      \begin{itemize}
+        \item Use a second Start block to make the flashing and eyes happen while the robot moves around and does other activities
+        \item Explore and add brand new behavior to the robots for each case.
+      \end{itemize}
+    \subsection{Conclusion and Evaluation}
+      Give the kids a chance to experiment with the bot sensors by allowing them to decide what behaviour should be executed under different conditions.
+\end{document}

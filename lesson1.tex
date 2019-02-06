@@ -1,0 +1,120 @@
+\documentclass{lessonplan}
+
+% Constants
+\newcommand{\lessonNumber}{1}
+\title{Lesson \lessonNumber: Moving your Robot}
+\author{\linkHome}
+\date{}
+
+% Buildup
+\setLessonNumber{\lessonNumber}
+
+
+%Document
+\begin{document}
+
+  \maketitle
+
+  \section{Overview}
+    \subsection{Summary}
+      In this lesson, the students will learn to become familiar with downloading programs to the robot and using a basic move block.
+
+
+    \subsection{Objectives}
+    \begin{itemize}
+      \item Become familiar with the basics of how to download and run programs
+      \item Learn how to move the robot
+      \item (Intermediate) Move the robot in interesting ways
+      \item (Advanced) Discuss why the motors spinning in opposite directions can allow the robot to turn.
+    \end{itemize}
+    
+    
+    \subsection{Key Vocabulary Terms}
+    \begin{itemize}
+      \item Speed
+      \item (Intermediate) Motor, Rotation
+      
+      
+    \end{itemize}
+    \subsection{Materials}
+      \begin{itemize}
+        \item Standard ev3 brick
+        \item Laptops
+        \item Programming Cables
+        \item Demo program
+      \end{itemize}
+      
+      
+  \section{Procedure}
+    \subsection{Setup (10 minutes)}
+      Turn on computers and open the programming environment. Build and turn on bots.
+    \subsection{Introduction (5 minutes)}
+      Explain what robots are and connect the lesson to any previously covered class concepts.
+    \subsection{Demonstration}
+      Play the demo program, which should move the robot in some way.
+    \subsection{Guided Practice}
+    Add a Move Steering block to your program.
+    Find the Move Steering block from the catalog of blocks at the bottom of the screen:
+    
+    \procedureImage[0.6]{1-1.png}
+
+    Drag it from the catalog and connect it to the Start block like it is here:
+    
+    \procedureImage[0.6]{1-2.png}
+
+
+    Download and run your program. Watch what the Move Steering block does before you start changing anything about it.
+    \par
+    Before you continue, here is a picture of the Move Steering block. Below we have written what each of the different buttons controls. You will get a chance to explore all of these.
+
+    \procedureImage[0.6]{1-3.png}
+    \textcolor{magenta}{Magenta}: Method of steering control \hfill \\
+    \textcolor{red}{Red}: Steering  \hfill \\
+    \textcolor{blue}{Blue}: Power  \hfill \\
+    \textcolor{green}{Green}: Rotations  \hfill \\
+    \textcolor{orange}{Orange}: Brake at end or not  \hfill \\
+
+    Try changing the Power setting (blue box on the diagram) on the block.
+    The Power setting is what determines how fast your robot moves. Ask the students the following questions:
+    \begin{itemize}
+        \item What happens if you set it to 100?
+        \item What happens if you set it to -100?
+        \item What happens if you set it to 0?
+        \item Set the power on your block to whatever speed you want.
+    \end{itemize}
+    \par
+    Let’s try to change the steering setting (red box on the diagram) on the block
+    The Steering determines which direction your robot will move.
+    \begin{itemize}
+        \item What happens if you set it to 100?
+        \item What happens if you set it to -100?
+        \item What happens if you set it to 0?
+    \end{itemize}
+    \par
+    Figure out how to make the robot turn to the right and then move forward
+    \par
+    Take a few minutes to play around with some of the other settings
+    \begin{itemize}
+        \item What happens if you change the Brake at End setting (orange box on the diagram)?
+        \item What happens if you change the Rotations to 2 or 3 (green box on the diagram)?
+        \item Can you figure out how to make the robot move forward for exactly 5 seconds (hint: there’s one setting we haven’t asked you to touch yet)?
+        \item  How would you make the robot move backwards and to the left at the same time using exactly one block?
+    \end{itemize}
+
+    \subsection{Extensions}
+      \begin{itemize}
+        \item Make the robot move forward a couple of feet.
+        \item Make the robot turn around completely.
+        \item Make the robot move forward again so that it returns to its starting location.
+        \item (advanced) Celebrate by having the robot make a sound of your choice.
+        \item (advanced) Make your robot do a figure-8 and stop in the same place it started.
+        \item (advanced) Make your robot try to spell out the first letter in one (or more) of your group members’ names. If you have time, try to spell out a full name!
+      \end{itemize}
+    \subsection{Conclusion and Evaluation}
+      Give the kids a chance to show what they can make the bots do.
+      \subsubsection{Exit Questions}
+      \begin{itemize}
+        \item When the robot turns left, which motor spins forward? Why?
+      \end{itemize}
+
+\end{document}

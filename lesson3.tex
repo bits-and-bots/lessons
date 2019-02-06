@@ -1,0 +1,148 @@
+\documentclass{lessonplan}
+
+% Constants
+\newcommand{\lessonNumber}{3}
+\title{Lesson \lessonNumber: Making the Robot Repeat Actions (Looping)}
+\author{\linkHome}
+\date{}
+
+% Buildup
+\setLessonNumber{\lessonNumber}
+
+
+%Document
+\begin{document}
+
+  \maketitle
+
+  \section{Overview}
+    \subsection{Summary}
+      This lesson teaches students how to make your robot repeat a task. This is called looping. Loops are useful because they let you use a small number of blocks to make the robot do a large number of actions.
+      
+    \subsection{Objectives}
+    \begin{itemize}
+      \item Learn how to reduce code bloat by using loops
+      \item (Intermediate) Learn how to undo actions by using loops
+      \item (Advanced) Investigate the physics of sound
+    \end{itemize}
+    
+    \subsection{Key Vocabulary Terms}
+    \begin{itemize}
+      \item Pitch, Higher Pitch, Lower Pitch
+      \item (Intermediate) Hertz, Frequency
+      \item (Advanced) Period
+    \end{itemize}
+    
+    \subsection{Materials}
+      \begin{itemize}
+        \item Standard ev3 brick
+        \item Laptops
+        \item Programming Cables
+        \item Smart phones with recordings of songs
+        \item Demo Program: pop song played on the robot using sound
+          blocks
+      \end{itemize}
+      
+  \section{Procedure}
+    \subsection{Setup (10 minutes)}
+      Turn on computers and open the programming environment.
+
+
+    \subsection{Introduction (5 minutes)}
+      Introduce with a video of a musician that is recognizable to the
+      students, preferring one that makes heavy use of synthesizers.
+      Explain that the sounds are made by computers and that the robot
+      is capable of making similar music (it's not entirely untrue).
+      A way to get the students interested in the lesson.
+      
+    \subsection{Demonstration}
+      Play the demo program, with sound blocks using the pitch
+      setting.  Then show them how to make the notes 1, 2 and 3 of the
+      major scale using the sound blocks, in addition to the wait
+      block.  Make a program that plays the first 3 notes of "three
+      blind mice", with the rest at the end, leave the notes on the
+      projector so the students know which frequencies to use.
+      
+    \subsection{Guided Practice}
+    Add a Sound block to your program.
+    Find the Sound block from the catalog of blocks at the bottom of the screen:
+    \procedureImage[0.6]{3-1.png}
+    Drag it in from the catalog and connect it to the Start block like this:
+    \procedureImage[0.6]{3-2.png}
+    On the Sound block, click on the folder icon underneath the speaker icon.  Then click on the music note for “Play Tone”. After you do this, the block should look like this:
+    \procedureImage[0.6]{3-3.png}
+    We will talk about what each of these options does later.
+    \par
+    Download and run your program.
+    Listen to the robot play the sound when you run the program.
+    \par
+    Before you continue, here is a picture of the Sound block. Below we have written what each of the buttons do.
+    \procedureImage[0.6]{3-4.png}
+    \textcolor{red}{Red}: What sound to play. We have selected “Play Tone”, which plays a plain sounding beep. \hfill\\
+    \textcolor{orange}{Orange}: How high or low to play the tone. Higher numbers play higher-pitched tones. Setting this to 440 plays one of the “A” notes in music.\hfill\\
+    \textcolor{green}{Green}: How many seconds to play the sound for. We have selected 1 second.\hfill\\
+    \textcolor{blue}{Blue}: The volume of the sound. 100 is the loudest volume.\hfill\\
+    \textcolor{purple}{Purple}: Whether to wait until the sound has finished playing before moving on to the next block. The checkered flag means we want the robot to wait.\hfill\\
+    \par
+    Play the sound more than once using a Loop block.
+    Say you wanted to play the sound 10 times in a row. You could put down 10 Sound blocks in your program, but this would take a long time. There is an easier way… the Loop block!
+    \par
+    This is the block that allows you to execute another block (or a bunch of blocks) repetitively. Add a Loop block to your program by clicking on the orange tab in the catalog of blocks at the bottom of the screen:
+    \procedureImage[0.6]{3-5.png}
+    Add it to your program, and then drag the Sound block inside of the Loop block. Your program should now look like this:
+    \procedureImage[0.6]{3-6.png}
+    Notice on the right-hand side of the Loop block that there is an “infinity” symbol. This means the loop will keep playing the sound over and over again forever.
+    \par
+    Add a Wait block.
+    Right now, the Loop block will play the Sound block over and over again with no pauses, making it sound like the tone never stops. Instead, we want the EV3 to wait a bit before playing the tone again. This will make the EV3 play the tone, wait, play the tone, wait, play the tone, wait, and so on. Since the EV3 will wait a little bit every time the loop repeats, you will now hear individual one second long tones instead of a long, continuous tone. This makes it easier to know when the loop repeats.
+    \par
+    Add a Wait block by clicking on the orange tab in the catalog of blocks, and dragging the block shown below:
+    \procedureImage[0.6]{3-7.png}
+    Place the Wait block inside of the Loop block and after the Sound block, as shown in the picture below:
+    \procedureImage[0.6]{3-8.png}
+    Right now, the Wait block is set to wait for one second. This means that when the EV3 gets to the Wait block in your program, it will wait for one second before moving on to its next task. Here is some more information on what the buttons on the Wait block do:
+    \procedureImage[0.6]{3-9.png}
+
+    \textcolor{red}{Red}: Whether to wait for a certain number of seconds, a button to be pressed, a sensor to detect something, or something else. Right now, it is set to wait a certain number of seconds. \hfill \\
+    \textcolor{blue}{Blue}: How many seconds to wait.
+    \par
+    Download and run your program.
+    Does the sound ever stop getting played? After a while, stop the program by pressing the “Back” button on the top left of the robot.
+    \par
+    Set the loop to only repeat 10 times.
+    Click on the “infinity” symbol on the right side of the Loop block. Then click on "\# Count" in the menu that appears. In the \# field, enter 10. Your program should now look like this:
+    \procedureImage[0.6]{3-10.png}
+    \par
+    Download and run your program.
+    Count how many times the tone gets played for before the program stops. It should be 10 times!
+    \par
+    Add a Move Steering block to your program.
+    Find the Move Steering block from the catalog of blocks at the bottom of the screen:
+    \procedureImage[0.6]{3-11.png}
+    Drag it from the catalog and place it between the Sound block and Wait blocks like shown here:
+    \procedureImage[0.6]{3-12.png}
+    Now set the number of times the loop will repeat to 5. This will hopefully keep the robot from driving off the table! Now your program should look like this:
+    \procedureImage[0.6]{3-13.png}
+    \par
+    Download and run your program.When you watch your program run, think about the following questions:
+    \begin{itemize}
+        \item Which block gets run first, the Sound block or the Move Steering block? Why?
+        \item If you wanted to switch the order in which the Sound and Move Steering blocks are run, how would you change your program? Why would this work?
+        \item How many times does the loop get executed?
+    \end{itemize}
+
+    \subsection{Extensions}
+      \begin{itemize}
+        \item Play with the settings in the Move Steering block to make the robot turn 90 degrees every time the Move Steering block is run. As the loop runs, does your robot move in a circle? If not, try to make this happen!
+        \item Play "Hot Cross Buns", have the students find
+          the right pitch for the fifth through experimentation
+        \item Change the settings in the Loop block so that instead of repeating a set number of times, the loop repeats until one of the EV3’s buttons are pressed.
+      \end{itemize}
+    \subsection{Conclusion and Evaluation}
+      Give the kids a chance to show the music that they created
+      \subsubsection{Exit Questions}
+      \begin{itemize}
+        \item How does frequency affect the pitch of a tone?
+      \end{itemize}
+
+\end{document}

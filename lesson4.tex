@@ -1,0 +1,86 @@
+\documentclass{lessonplan}
+
+% Constants
+\newcommand{\lessonNumber}{4}
+\title{Lesson \lessonNumber:  Using the Buttons to Move the Robot}
+\author{\linkHome}
+\date{}
+
+% Buildup
+\setLessonNumber{\lessonNumber}
+
+
+%Document
+\begin{document}
+
+  \maketitle
+
+  \section{Overview}
+    \subsection{Summary}
+      This lesson teaches students how to determine behavior from user input (in this case, moving the robot based on button input). 
+    \subsection{Objectives}
+    \begin{itemize}
+      \item Learn about user input
+      \item (Intermediate) Practice skills from previous lessons
+    \end{itemize}
+    \subsection{Key Vocabulary Terms}
+    \begin{itemize}
+      \item Loop
+      \item (Intermediate) Infinity
+    \end{itemize}
+    \subsection{Materials}
+      \begin{itemize}
+        \item Any materials needed, including the standard set of
+          equipment
+        \item Standard ev3 brick
+        \item Laptops
+        \item Programming Cables
+        \item Demo Program: robot that moves in button direction
+      \end{itemize}
+  \section{Procedure}
+    \subsection{Setup (10 minutes)}
+      Setup laptops and open programming environment.
+      
+    \subsection{Introduction (5 minutes)}
+      Introduce with a video of Stevie Wonder playing the keyboard. Show the students how each time he presses the a button, a different sound comes out of the keyboard.
+      
+    \subsection{Demonstration}
+      Play the demo program, showing the students the robot moving according to the button pressed on the ev3 block.
+      
+    \subsection{Guided Practice}
+    Add a Switch block to your program.
+    Find the switch block from the catalog of blocks at the bottom of the screen:
+    \procedureImage[0.5]{4-1.png}
+    Drag it in from the catalog and connect it to the Start block like this:
+    \procedureImage[0.4]{4-2.png}
+    On the Switch block, click on the folder icon (the first button in the Switch block).  Then click on the Brick Buttons option and click on Measure:
+    \procedureImage[0.4]{4-3.png}
+    Set the top case to respond to a left button press. Set the bottom case to respond to a right button press. Now let’s add two move steering blocks so that when you click the left or right button, the robot moves in that direction.
+    \procedureImage[0.3]{4-5.png}
+    Download and run your program.
+    Watch the robot move in the direction you pick with your button presses.
+    \par
+    Put the Switch block inside a loop.
+    \procedureImage[0.2]{4-6.png}
+    Download and run your program. Can you guide your robot from the starting spot to the finish line?
+    \par
+    Add forward and reverse options to your robot.
+    Add two more cases by clicking the “Add” button shown below. Use the “Choose” button to set one of your new cases to run when the up arrow is pressed and the other case to run when the down arrow is pressed. 
+    \procedureImage[0.6]{4-7.png}
+    When the up arrow is pressed the robot should move forward, and when the down arrow is pressed the robot should move backwards.
+    \procedureImage[0.3]{4-9.png}
+    Download and run your program.
+    Is it easier to get to the finish line?
+
+    \subsection{Extensions}
+      \begin{itemize}
+        \item Add display blocks to each case in the switch block. Set these display blocks to display the direction the robot if moving in.
+        \item Change the settings of the loop block so that it will stop when the center button is pressed. Now you can press the center button to tell the robot that it has reached the finish line. Add a sound block after the loop so that the robot can play a sound to celebrate.
+      \end{itemize}
+    \subsection{Conclusion and Evaluation}
+      \subsubsection{Exit Questions}
+      \begin{itemize}
+        \item How might you make your robot easier to steer?
+      \end{itemize}
+
+\end{document}

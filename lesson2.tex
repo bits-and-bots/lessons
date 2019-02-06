@@ -1,0 +1,105 @@
+\documentclass{lessonplan}
+
+% Constants
+\newcommand{\lessonNumber}{2}
+\title{Lesson \lessonNumber: Moving your Robot (Continued)}
+\author{\linkHome}
+\date{}
+
+% Buildup
+\setLessonNumber{\lessonNumber}
+
+
+%Document
+\begin{document}
+  \maketitle
+  \begin{center}
+        Note: This is an optional extension of Lesson 1
+  \end{center}
+
+  \section{Overview}
+    \subsection{Summary}
+      In this lesson we should have basic knowledge of move blocks. If the students do not have this knowledge, please review lesson 1. In this lesson, we create shapes by combining multiple move blocks.
+    \subsection{Objectives}
+    \begin{itemize}
+      \item Learn about order of execution what happens when multiple blocks are put one after another
+      \item (Intermediate) Use basic rules of symmetry to make shapes
+      \item (Advanced) Use basic geometry to make more advanced shapes
+    \end{itemize}
+    \subsection{Key Vocabulary Terms}
+    \begin{itemize}
+      \item Speed
+      \item (Intermediate) Motor, Rotation
+        \item (Advanced) Symmetry
+
+    \end{itemize}
+    \subsection{Materials}
+      \begin{itemize}
+        \item Standard ev3 brick
+        \item Laptops
+        \item Programming Cables
+        \item Demo Program: Multi-step movement example
+      \end{itemize}
+      
+      
+      
+  \section{Procedure}
+  
+    \subsection{Setup (10 minutes)}
+      Turn on computers and open the programming environment.
+      
+    \subsection{Introduction (5 minutes)}
+        Talk about how we get from one side of a table to another. There are multiple phases where we perform multiple actions, turning and moving straight at different points along the route.
+        \par
+        If necessary review the move block from the previous lesson:
+        \procedureImage[0.7]{2-3.png}
+            \textcolor{magenta}{Magenta}: Method of steering control \hfill \\
+            \textcolor{red}{Red}: Steering  \hfill \\
+            \textcolor{blue}{Blue}: Power  \hfill \\
+            \textcolor{green}{Green}: Rotations  \hfill \\
+            \textcolor{orange}{Orange}: Brake at end or not  \hfill \\
+    \subsection{Demonstration}
+      Play the demo program which shows the robot making a basic shape (eg. a square).
+    
+    \subsection{Guided Practice}
+        Add a few Move Steering blocks to your program.
+        With each block try something different from the previous blocks. 
+        Remember what we learned last time:
+        \begin{itemize}
+            \item The Power setting is what determines how fast your robot moves.
+            \item The Steering determines which direction your robot will move.
+            \item The Distance setting determines how far the robot will go
+        \end{itemize}
+        
+        Here is a simple example program at this point in the lesson:
+        \procedureImage[0.6]{2-4.png}
+        Download and run your program. Watch what the new Move Steering block does before you start changing anything about it or adding more blocks.
+        \par
+        Try and add moving blocks into a sequence that makes a drawing 
+        \par
+        Keep adding blocks to try and have the robots have  something different from the previous blocks. Here are some ideas of what you can draw:
+        \begin{itemize}
+            \item Any letter in the alphabet
+            \item A shape (a circle, triangle or square) 
+            \item Try doing multiple shapes 
+            \item Try doing a zig-zag
+        \end{itemize}
+        \procedureImage[0.4]{2-5.png}
+        Test your skills with some challenges: 
+        
+
+    \subsection{Extensions}
+      \begin{itemize}
+        \item Try drawing a square wave (shown below)
+        \item (Advanced) Try writing out your name
+      \end{itemize}
+      \procedureImage[0.4]{2-6.png}
+    \subsection{Conclusion and Evaluation}
+      Give the kids a chance to show off their programs to the class.
+      \subsubsection{Exit Questions}
+      \begin{itemize}
+        \item What do you notice about symmetrical shapes?
+        \item What order is the program executed in?
+      \end{itemize}
+
+\end{document}
