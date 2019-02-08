@@ -87,6 +87,29 @@ communication and may be different per request.
 git clone <>
 ```
 
+### Building
+If you want to build all the lessons at once, or just prefer working in a text editor, you can use the included makefile to compile lessons.
+
+To compile all the lessons in your terminal, navigate to the project directory, and run:
+
+```bash
+make
+```
+
+To compile a specific lesson, just include the name of the pdf file you want to generate. For example to build lesson one, you would write:
+
+```bash
+make lesson1.pdf
+```
+
+The resulting pdf files for that will be placed in the newly created out folder.
+
+To build with debug information, you can also use:
+
+```bash
+make debug
+```
+
 #### Editing the Code
 
 1. Create an issue on our GitHub, make sure to have an informative title
@@ -113,3 +136,5 @@ git push
 8. Eventually, our CI systems will automatically update our website to contain
 the newest version of our PDFs, but for now, one of us will automatically
 update the website to contain the new PDFs.
+
+
