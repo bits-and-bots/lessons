@@ -104,12 +104,6 @@ make lesson1.pdf
 
 The resulting pdf files for that will be placed in the newly created out folder.
 
-To build with debug information, you can also use:
-
-```bash
-make debug
-```
-
 #### Editing the Code
 
 1. Create an issue on our GitHub, make sure to have an informative title
