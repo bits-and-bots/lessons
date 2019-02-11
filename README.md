@@ -90,7 +90,7 @@ git clone <>
 
 ### Building
 
-#### MAC
+#### Mac
 If you want to build all the lessons at once, or just prefer working in a text editor, you can use the included makefile to compile lessons.
 
 To compile all the lessons in your terminal, navigate to the project directory, and run:
@@ -113,7 +113,9 @@ If you want to build all the lessons at once, you can use the included powershel
 To compile all the lessons in your terminal, you can
 1. right click on `win-compile-all.ps1` and select "Run with PowerShell"
 or
-2. navigate to the project directory using Windows PowerShell and run `.\win-compile-all.ps`
+2. navigate to the project directory using Windows PowerShell and run `.\win-compile-all.ps1`
+
+TODO: script to compile individual lessons
 
 #### Editing the Code
 
