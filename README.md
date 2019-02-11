@@ -18,9 +18,10 @@ Windows: [MiKTeX](https://miktex.org)
 Linux/Cross Platform: [TeX Live](https://tug.org/texlive/acquire-netinstall.html)
 
 I've tested a few offline LaTeX editors, and personally found the
-simplist to be:
+simplest to be:
 
-Mac Only: [TeXworks](https://www.tug.org/texworks/)  
+Mac Only: [TeXworks](https://www.tug.org/texworks/)
+Windows: [MiKTeX](https://miktex.org)
 Linux/Windows/Mac: [Texmaker](http://www.xm1math.net/texmaker/)
 
 #### Online Editing
@@ -35,7 +36,7 @@ can use to get started writing LaTeX right away.
 
 ##### The Structure of the Program
 
-All style and template definitions go in 
+All style and template definitions go in
 
 ### A Problem? Suggestion? Both?
 
@@ -88,6 +89,8 @@ git clone <>
 ```
 
 ### Building
+
+#### MAC
 If you want to build all the lessons at once, or just prefer working in a text editor, you can use the included makefile to compile lessons.
 
 To compile all the lessons in your terminal, navigate to the project directory, and run:
@@ -103,6 +106,14 @@ make lesson1.pdf
 ```
 
 The resulting pdf files for that will be placed in the newly created out folder.
+
+#### Windows
+If you want to build all the lessons at once, you can use the included powershell script to compile lessons.
+
+To compile all the lessons in your terminal, you can
+1. right click on `win-compile-all.ps1` and select "Run with PowerShell"
+or
+2. navigate to the project directory using Windows PowerShell and run `.\win-compile-all.ps`
 
 #### Editing the Code
 
@@ -130,5 +141,3 @@ git push
 8. Eventually, our CI systems will automatically update our website to contain
 the newest version of our PDFs, but for now, one of us will automatically
 update the website to contain the new PDFs.
-
-
