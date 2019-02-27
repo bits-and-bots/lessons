@@ -1,5 +1,6 @@
 ### Custom ###
 lesson*.pdf
+out/
 
 # Created by https://www.gitignore.io/api/git,linux,macos,latex,windows
 # Edit at https://www.gitignore.io/?templates=git,linux,macos,latex,windows
