@@ -2,7 +2,7 @@
 
 % Constants
 \newcommand{\lessonNumber}{1}
-\title{Lesson \lessonNumber: Moving your Robot}
+\title{Lesson \lessonNumber: Getting Started with ev3 Robots and LEGO MINDSTORM programming }
 \author{\linkHome}
 \date{}
 
@@ -22,7 +22,7 @@
 
     \subsection{Objectives}
     \begin{itemize}
-      \item Become familiar with the basics of how to download and run programs
+      \item Become familiar with the basics of how to download and run programs. Use the Mindstorm brick to display their name and change the LED light.  
       
 
     \end{itemize}
@@ -30,8 +30,8 @@
     
     \subsection{Key Vocabulary Terms}
     \begin{itemize}
-      \item Speed
-      \item (Intermediate) Motor, Rotation
+      \item Blocks, Start Block
+      \item (Intermediate) Action Blocks, Flow Blocks
       
       
     \end{itemize}
@@ -46,77 +46,57 @@
       
   \section{Procedure}
     \subsection{Setup (10 minutes)}
-      Turn on computers and open the programming environment. Build and turn on bots.
+      Turn on computers and open the programming environment. Build and turn on bots. 
     \subsection{Introduction (5 minutes)}
-      Explain what robots are and connect the lesson to any previously covered class concepts.
+	Start a discussion about robots with the students. Ask what are robots, what are some kinds of robots that they know, and what can robots do. Explain that they will get an opportunity to work with their own robots. 
     \subsection{Demonstration}
-      Play the demo program, which should move the robot in some way.
+      Show them their robots and explain some of the different parts of the robots. The diagram below shows a description of the buttons as well as some common status indicators on the robot. 
+
+   \procedureImage[0.5]{1-1.png}
+
+    Explain to students that they will be able to program the robot by creating a program on their computer, connecting their robot to the computer, and then downloading the program on their computer. You will be demonstrating this with a simple program. Have students follow the guided practice step by step. 
     \subsection{Guided Practice}
-    Goal: Move the robot in a square shape.
+	\par Open the LEGO MINDSTORM programming enviroment. Start a new project by clicking on the plus symbol next to the Lobby tab.
+	\procedureImage[0.5]{1-2.png}
+	\par This will open up a blank program. Explain the differnent parts of the interface. 
+	\begin{itemize}
+		\item The blank part of the screen is called the "canvas"
+		\item Each individual programming component is called a "block"
+		\item The lower right panel is the "hardware panel", which they will use to download and run the program on the robot
+	\end{itemize}
 
-    First, add a Move Steering block to your program.
-    Find the Move Steering block from the catalog of blocks at the bottom of the screen:
-    
-    \procedureImage[0.6]{1-1.png}
+	\par Tell students that they will be using these blocks to have the robots do different things. Their very first program will be a "Hello World!" program, where they will be showing this message on the robot itself. Recreate the below program on the projector, going through step by step what the start and text blocks are and what each setting on the block does.
 
-    Drag it from the catalog and connect it to the Start block like it is here:
-    
-    \procedureImage[0.6]{1-2.png}
+	\procedureImage[0.5]{1-3.png}
 
+	\par Then, go through the process of downloading the program on the robot. Explain the difference between:
+	\begin{itemize}
+		\item Download setting (1)
+		\item Download and run (2)
+		\item Download and run selected blocks (3)
+	\end{itemize}
+	\procedureImage[0.5]{1-4.png}
 
-    Download and run your program. Watch what the Move Steering block does before you start changing anything about it.
-    \par
-    Before you continue, here is a picture of the Move Steering block. Below we have written what each of the different buttons controls. You will get a chance to explore all of these.
+	\par Once you have the program downloaded to the robot, show them the result and have students replicate the program. After students are able to show their messages on the screen, move on to experimenting with the LED indicator block. 
 
-    \procedureImage[0.6]{1-3.png}
-    \textcolor{magenta}{Magenta}: Method of steering control \hfill \\
-    \textcolor{red}{Red}: Steering  \hfill \\
-    \textcolor{blue}{Blue}: Power  \hfill \\
-    \textcolor{green}{Green}: Rotations  \hfill \\
-    \textcolor{orange}{Orange}: Brake at end or not  \hfill \\
+	\par Connect the LED block to the end of the display block. Show students that they are able to conenct multiple blocks together to have the robot do multiple things at once. The program should now look like this: 
+	
+	\procedureImage[0.5]{1-5.png}
 
-    Try changing the Power setting (blue box on the diagram) on the block.
-    The Power setting is what determines how fast your robot moves. Ask the students the following questions:
-    \begin{itemize}
-        \item What happens if you set it to 100?
-        \item What happens if you set it to -100?
-        \item What happens if you set it to 0?
-        \item Set the power on your block to whatever speed you want.
-    \end{itemize}
-    \par
-    Let’s try to change the steering setting (red box on the diagram) on the block
-    The Steering determines which direction your robot will move.
-    \begin{itemize}
-        \item What happens if you set it to 100?
-        \item What happens if you set it to -100?
-        \item What happens if you set it to 0?
-    \end{itemize}
-    \par
-    Figure out how to make the robot turn to the right and then move forward
-    \par
-    Take a few minutes to play around with some of the other settings
-    \begin{itemize}
-        \item What happens if you change the Brake at End setting (orange box on the diagram)?
-        \item What happens if you change the Rotations to 2 or 3 (green box on the diagram)?
-        \item Can you figure out how to make the robot move forward for exactly 5 seconds (hint: there’s one setting we haven’t asked you to touch yet)?
-        \item  How would you make the robot move backwards and to the left at the same time using exactly one block?
-    \end{itemize}
+	\par Download the program, and show students the result. Again, have students replicate this on their own robots. 
+	
+	\par Finally, have students use the wait block. Experiment with the placement of the wait block as well as the duration of the wait block. Students should recognize that the program is read sequentially from the start block. 
+
+	\procedureImage[0.5]{1-6.png}
 
     \subsection{Extensions}
-      \begin{itemize}
-        \item Make the robot move forward a couple of feet.
-        \item Make the robot turn around completely.
-        \item Make the robot move forward again so that it returns to its starting location.	
-        \item (advanced) Make your robot try to spell out the first letter in one (or more) of your group members’ names. If you have time, try to spell out a full name!
-        \item (advanced) Celebrate by having the robot make a sound of your choice.
-        \item (advanced) Make your robot do a figure-8 and stop in the same place it started.
-        
-      \end{itemize}
+	\par Encourage students to look through the MINDSTORM programming interface and take a look at different blocks. Explain that in every session, you will be looking at most of these blocks in more detail. 
+
     \subsection{Conclusion and Evaluation}
-      Give the kids a chance to show what they can make the bots do.
       \subsubsection{Exit Questions}
       \begin{itemize}
-        \item When the robot turns left, which motor spins forward? Why?
+        	\item How is the program read by the robot? Does the order matter/
+	\item What do you think are some cool programs that you can make with these robots? How will you make them?
       \end{itemize}
 
 \end{document}
