@@ -2,7 +2,7 @@
 
 % Constants
 \newcommand{\lessonNumber}{2}
-\title{Lesson \lessonNumber: Moving your Robot (Continued)}
+\title{Lesson \lessonNumber: Moving your Robot}
 \author{\linkHome}
 \date{}
 
@@ -13,17 +13,16 @@
 %Document
 \begin{document}
   \maketitle
-  \begin{center}
-        Note: This is an optional extension of Lesson 1
-  \end{center}
+
 
   \section{Overview}
     \subsection{Summary}
-      In this lesson we should have basic knowledge of move blocks. If the students do not have this knowledge, please review lesson 1. In this lesson, we create shapes by combining multiple move blocks.
+      In this lesson, we create shapes by combining multiple move blocks. Students should be familiar with the programming enviroment and comforatble with downloading code to the robot. 
+      
     \subsection{Objectives}
     \begin{itemize}
-      \item Learn about order of execution what happens when multiple blocks are put one after another
-      \item (Intermediate) Use basic rules of symmetry to make shapes
+     \item Learn how to move the robot through a tape obstacle course  
+      \item (Intermediate) Learn about order of execution what happens when multiple blocks are put one after another
       \item (Advanced) Use basic geometry to make more advanced shapes
     \end{itemize}
     \subsection{Key Vocabulary Terms}
@@ -46,56 +45,111 @@
   \section{Procedure}
   
     \subsection{Setup (10 minutes)}
-      Turn on computers and open the programming environment.
+      Turn on computers and open the programming environment. Construct a tape obstacle course on a table that students are able to navigate through. Ideally, there should be an easy course and a hard course. Two examples of these courses are shown in the appendix. 
       
     \subsection{Introduction (5 minutes)}
-        Talk about how we get from one side of a table to another. There are multiple phases where we perform multiple actions, turning and moving straight at different points along the route.
-        \par
-        If necessary review the move block from the previous lesson:
-        \procedureImage[0.7]{2-3.png}
-            \textcolor{magenta}{Magenta}: Method of steering control \hfill \\
-            \textcolor{red}{Red}: Steering  \hfill \\
-            \textcolor{blue}{Blue}: Power  \hfill \\
-            \textcolor{green}{Green}: Rotations  \hfill \\
-            \textcolor{orange}{Orange}: Brake at end or not  \hfill \\
+        Show students the the obstacle courses. Explain that they will start by making basic shapes with their robot, and by the end they will be able to program their robot to complete these courses. Play the demo program which shows the robot making a basic shape.
+
     \subsection{Demonstration}
       Play the demo program which shows the robot making a basic shape (eg. a square).
-    
     \subsection{Guided Practice}
-        Add a few Move Steering blocks to your program.
-        With each block try something different from the previous blocks. 
+    First, add a Move Steering block to your program.
+    Find the Move Steering block from the catalog of blocks at the bottom of the screen:
+    
+    \procedureImage[0.6]{2-1.png}
+
+    Drag it from the catalog and connect it to the Start block like it is here:
+    
+    \procedureImage[0.6]{2-2.png}
+
+
+    Download and run your program. Watch what the Move Steering block does before you start changing anything about it.
+    \par
+    Before you continue, here is a picture of the Move Steering block. Below we have written what each of the different buttons controls. You will get a chance to explore all of these.
+
+    \procedureImage[0.6]{2-3.png}
+    \textcolor{magenta}{Magenta}: Method of steering control \hfill \\
+    \textcolor{red}{Red}: Steering  \hfill \\
+    \textcolor{blue}{Blue}: Power  \hfill \\
+    \textcolor{green}{Green}: Rotations  \hfill \\
+    \textcolor{orange}{Orange}: Brake at end or not  \hfill \\
+
+    Try changing the power setting (\textcolor{blue}{blue} box on the diagram) on the block.
+    The power setting is what determines how fast your robot moves. Ask the students the following questions:
+    \begin{itemize}
+        \item What happens if you set it to 100?
+        \item What happens if you set it to -100?
+        \item What happens if you set it to 0?
+        \item Set the power on your block to whatever speed you want.
+    \end{itemize}
+    \par
+    Let’s try to change the steering setting (\textcolor{red}{red} box on the diagram) on the block.
+    The steering setting determines which direction your robot will move.
+    \begin{itemize}
+        \item What happens if you set it to 100?
+        \item What happens if you set it to -100?
+        \item What happens if you set it to 0?
+    \end{itemize}
+    \par
+    Figure out how to make the robot turn to the right and then move forward
+    \par
+    Take a few minutes to play around with some of the other settings
+    \begin{itemize}
+        \item What happens if you change the brake at end setting (\textcolor{orange}{orange} box on the diagram)?
+        \item What happens if you change the rotations to 2 or 3 (\textcolor{green}{green} box on the diagram)?
+        \item Can you figure out how to make the robot move forward for exactly 5 seconds (hint: there’s one setting we haven’t asked you to touch yet)?
+        \item  How would you make the robot move backwards and to the left at the same time using exactly one block?
+    \end{itemize}
+    
+        Try to replicate the square program that was demonstrated at the beginning of the class. 
         Remember what we learned last time:
         \begin{itemize}
-            \item The Power setting is what determines how fast your robot moves.
-            \item The Steering determines which direction your robot will move.
-            \item The Distance setting determines how far the robot will go
+            \item The power setting is what determines how fast your robot moves.
+            \item The steering determines which direction your robot will move.
+            \item The distance setting determines how far the robot will go
         \end{itemize}
         
         Here is a simple example program at this point in the lesson:
         \procedureImage[0.6]{2-4.png}
         Download and run your program. Watch what the new Move Steering block does before you start changing anything about it or adding more blocks.
+
         \par
-        Try and add moving blocks into a sequence that makes a drawing 
-        \par
-        Keep adding blocks to try and have the robots have  something different from the previous blocks. Here are some ideas of what you can draw:
+        Before students move to attempting the obstacle course, have each group demonstrate to the teacher that they are able to move the robot in a square. Ask one or two of the evaluation questions to make sure they understand the function of each block (see Understanding Shapes questions in Conclusion and Evaluation Section). 
+        
+        After they show that they understand the concepts, allow them to begin to work on the obstacle course. See extensions for ideas to extend obstacle course engagement.
+        
+
+
+    \subsection{Extensions}
+        If a team finishes early before most of the other groups, encourage them to try one of the below shapes:
         \begin{itemize}
             \item Any letter in the alphabet
             \item A shape (a circle, triangle or square) 
-            \item Try doing multiple shapes 
-            \item Try doing a zig-zag
+            \item A zig-zag
+            \item A square wave (see figure below)
+     	  \item Have students write their own name
         \end{itemize}
+    
         \procedureImage[0.4]{2-5.png}
-        Test your skills with some challenges: 
-        
+        \procedureImage[0.4]{2-6.png}
+              
+	Set the following goals for students to move through the obstacle course (in order of increasing difficulty). 
+	\begin{itemize}
+	  \item Have students move their robot through the easy obstacle course without running over the walls
+	  \item Have students move their robot through the hard obstacle course without running over the walls
+	  \item Have students move their robot through the easy obstacle course, turn around at the end, and then go through the obstacle course again from the exit to the entrance. Do the same for the hard obstacle course.
+	  \item Have students move their robot through each obstacle course backwards 
+	\end{itemize}
 
-    \subsection{Extensions}
-      \begin{itemize}
-        \item Try drawing a square wave (shown below)
-        \item (Advanced) Try writing out your name
-      \end{itemize}
-      \procedureImage[0.4]{2-6.png}
     \subsection{Conclusion and Evaluation}
       Give the kids a chance to show off their programs to the class.
+      \subsubsection{Understanding Shapes}
+      \begin{itemize}
+	\item How did you turn the robot?
+	\item How did you make sure that you made a perfect square (i.e how do they know all of the sides are of equal length)?
+	\item What is the best power level for your robot? Why?
+      \end{itemize}
+      
       \subsubsection{Exit Questions}
       \begin{itemize}
         \item What do you notice about symmetrical shapes?
