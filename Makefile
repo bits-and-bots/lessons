@@ -6,7 +6,7 @@ all:
 
 lesson%.pdf: lesson%.tex
 	mkdir -p out
-	xelatex $^ -halt-on-error > /dev/null
+	xelatex $^ -halt-on-error
 	mv $@ out/$@
 	rm *.aux
 	rm *.log
