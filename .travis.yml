@@ -1,7 +1,9 @@
 language: generic
 
 before_install:
-  - sudo apt-get install texlive-xetex
+  - sudo apt-get update
+  - sudo apt-get install texlive-xetex latexmk
+
 script:
   - make all 
 
