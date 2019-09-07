@@ -6,7 +6,7 @@ all:
 
 lesson%.pdf: lesson%.tex
 	mkdir -p out
-	latexmk -pdf -pdflatex="lualatex -interaction=nonstopmode" -use-make $^
+	latexmk -xelatex $^
 	mv $@ out/$@
 
 clean:
