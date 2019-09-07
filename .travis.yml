@@ -2,7 +2,7 @@ language: generic
 
 before_install:
   - sudo apt-get update
-  - sudo apt-get install texlive-xetex latexmk
+  - sudo apt-get install texlive-xetex latexmk lmodern
 
 script:
   - make all 
