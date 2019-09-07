@@ -1,11 +1,7 @@
 language: generic
 
 before_install:
-  - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended
   - sudo apt-get install texlive-xetex
-  - sudo apt-get install xzdec
-  - tlmgr init-usertree
-  - sudo tlmgr update --self --all 
 script:
   - make all 
 
