@@ -6,11 +6,9 @@ all:
 
 lesson%.pdf: lesson%.tex
 	mkdir -p out
-	xelatex $^ -halt-on-error > /dev/null
+	latexmk -xelatex $^
 	mv $@ out/$@
-	rm *.aux
-	rm *.log
-	rm *.out
 
 clean:
+	latexmk -CA
 	rm -rf out
