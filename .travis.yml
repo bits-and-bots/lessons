@@ -1,0 +1,13 @@
+language: generic
+
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install texlive-xetex latexmk lmodern texlive-fonts-recommended
+
+script:
+  - make all 
+
+notifications:
+  slack:
+    secure: bits-n-bots:1dqjI7NFiADCbSQTw4nhAGI6
+

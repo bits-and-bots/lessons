@@ -12,6 +12,7 @@
 \usepackage{fontspec}
 \usepackage{graphicx}% http://ctan.org/pkg/graphicx
 \usepackage{titlesec}
+\usepackage{tikz}
 
 \renewcommand{\thesection}{\Alph{section}} 
 \renewcommand{\thesubsection}{\arabic{subsection}}
@@ -26,12 +27,17 @@
       { -\height }{
         \includegraphics[width=1.5in]{Images/bits-and-bots-logo.png}}}}
 
-% Added March 7 2018 by Daniel Rassaby
 \usepackage{hyperref}
 \usepackage[parfill]{parskip}
 \pagenumbering{arabic}
 \newcommand{\sectionbreak}{\clearpage}
 
+% Styles for tikz diagrams
+\usetikzlibrary{shapes,shadows,arrows}
+\tikzstyle{line} = [draw, -stealth, thick]
+\tikzstyle{block} = [draw, rectangle, fill=blue!50, text width=12mm, text centered, minimum height=15mm, minimum width=15mm, node distance=10em]
+\tikzstyle{pickup} = [draw, diamond, fill=blue!10, text width=3em, text centered, minimum size=2mm, node distance=10em]
+\tikzstyle{startline} = [draw, rectangle, fill=green!60, text width=8em, text centered, minimum height=5mm, node distance=10em]
 
 % Given the lesson number for the page, sets all necessary file lookups to the appropriate folder assuming folder is named Lesson[\lessonNumber]
 \newcommand{\setLessonNumber}[1]{

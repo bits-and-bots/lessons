@@ -85,7 +85,7 @@ communication and may be different per request.
 2. Create an Issue on GitHub outlining the new feature or bug you are fixing.
 3. Navigate to the correct place in your terminal. Clone the repo.
 ```
-git clone <>
+git clone git@github.com:bits-and-bots/lessons.git
 ```
 
 ### Building
