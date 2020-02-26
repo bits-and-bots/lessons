@@ -24,6 +24,13 @@ Mac Only: [TeXworks](https://www.tug.org/texworks/)
 Windows: [MiKTeX](https://miktex.org)
 Linux/Windows/Mac: [Texmaker](http://www.xm1math.net/texmaker/)
 
+
+#### Linux Setup
+
+After unzipping and installing [TeX Live](https://tug.org/texlive/acquire-netinstall.html), 
+you may still need to install `latexmk` and `xelatex`.
+`sudo apt-get install latexmk texlive-xetex`
+
 #### Online Editing
 
 While I highly suggest an offline editor (to make your git workflow simpler),
