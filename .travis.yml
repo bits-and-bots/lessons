@@ -11,3 +11,5 @@ notifications:
   slack:
     secure: bits-n-bots:1dqjI7NFiADCbSQTw4nhAGI6
 
+after_success:
+  - ./push-lessons.sh
