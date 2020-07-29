@@ -55,4 +55,4 @@
 }
 
 % Link to homepage
-\newcommand{\linkHome}{\url{https://bitsnbots.weebly.com}}
+\newcommand{\linkHome}{\url{http://bits-and-bots.github.io/bits-app-web/}}
