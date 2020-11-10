@@ -122,6 +122,8 @@ To compile all the lessons in your terminal, you can
 or
 2. navigate to the project directory using Windows PowerShell and run `.\win-compile-all.ps1`
 
+Additionally, if you are able to install WSL (Windows Subsytem for Linux) onto your Windows machine, you can follow the mac/linux instructions more directly. 
+
 TODO: script to compile individual lessons
 
 #### Editing the Code
