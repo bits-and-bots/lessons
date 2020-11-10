@@ -1,0 +1,229 @@
+\documentclass{lessonplan}
+
+% Constants
+\newcommand{\lessonNumber}{Infinity}
+\title{The Infinity Lesson}
+\author{\linkHome}
+\date{}
+
+% Buildup
+\setLessonNumber{\lessonNumber}
+
+
+%Document
+\begin{document}
+
+  \maketitle
+
+  \section{Overview}
+    \subsection{Summary}
+      This lesson teaches students about infinite vs. finite, discrete vs. continuous, (self-similar) fractals, 
+      tessellations, and vector vs. pixel art.
+
+      It will also give students the basis to understand sequences, series, mapping, and proof by contradiction. 
+
+      Students will be introduced to powerful design technology, get a chance to hone their fine motor skills, and 
+      even get to take home their creations.
+
+      This lesson can, and should, be run differently every time depending on what students are curious and excited
+      about, and what materials are available.
+    \subsection{Objectives}
+    \begin{itemize}
+      \item Think about infinity (big infinity and little infinity) and how the real world is finite.
+      \item Cut and fold paper into repeating patterns.
+      \item (Intermediate) Think about continuity and how the real world is discrete.
+      \item (Intermediate) Think about how pixels are discrete and vectors are continuous, and how technology can be 
+        used to model continuity with vectors. Make vector and pixel art.
+      \item (Advanced) Reason about properties of big infinity.
+      \item (Advanced) Reason about infinities of different sizes.
+      \item (Cooperative) Create collaborative fractals and/or tessellations.
+    \end{itemize}
+    \subsection{Key Vocabulary Terms}
+    \begin{itemize}
+      \item infinite, infinitesimal, finite, fractal, tessellation, translation, rotation, reflection
+      \item (Intermediate) discrete, continuous
+      \item (Advanced) vector, pixel, (sequence/pattern/repetition) depth
+    \end{itemize}
+    \subsection{Materials}
+      \begin{itemize}
+        \item White letter paper -- 1 ream
+        \item Color letter paper -- 1 ream, or enough sheets for each student and instructor to get 1
+        \item Tissue paper -- 1 sheet
+        \item Scissors -- a few pairs; if not enough for every student, they can share
+        \item Tape -- 1 or 2 rolls, color/opacity doesn't matter
+        \item Some sort of writing implement (pencils, pens, markers, etc.) for each student
+        \item Origami paper -- at least 1 sheet per intermediate student and instructor
+        \item Origami hydrangea fractals and herringbone tessellations of different depths, created by Verda, shown 
+          below for instructor reference during preparation for the lesson. The originals should be brought to the 
+          lesson, not just these images.
+          \procedureImage[0.1]{example-hydrangea.jpg}
+          \procedureImage[0.1]{example-herringbone.jpg}
+        \item iPad (alternative: computer with Adobe Photoshop and Adobe Illustrator installed)
+        \item (on iPad) Adobe Fresco document with the same layer in vector and pixel format, with large enough 
+          dimensions that the vector and pixel layers look the same (or as close as possible) at 100\% zoom.
+          Alternative if no iPad: same layer in Photoshop and Illustrator, but one is pixel and one is vector.
+        \item (on iPad) Adobe Fresco document with Sierpinski triangle. Alternative if no iPad: Illustrator document.
+        \item (on iPad) Adobe Fresco document with triangle tessellation. Alternative if no iPad: Illustrator document.
+        \item (on iPad or computer) YouTube Video 1: 
+          \url{https://www.youtube.com/watch?v=4YDHsMUQbVg}
+        \item (on iPad or computer) YouTube Video 2: 
+          \url{https://www.youtube.com/watch?v=Ms655fMOxWE&list=PLUx6ByGW00PzyFMhIoL47_ZezTEQpquh1&index=1}
+        \item (on iPad or computer) YouTube Video 3: 
+          \url{https://www.youtube.com/watch?v=7bFPoGRUJqc&list=PLUx6ByGW00PzyFMhIoL47_ZezTEQpquh1&index=2}
+        \item (on iPad or computer) YouTube Video 4: 
+          \url{https://www.youtube.com/watch?v=U7TKtjQl1zk&list=PLUx6ByGW00PzyFMhIoL47_ZezTEQpquh1&index=3}
+        \item (on iPad or computer) YouTube Video 5: \url{https://www.youtube.com/watch?v=RDN7JZpXor4}
+        \item (on iPad or computer) YouTube Video 6: \url{https://www.youtube.com/watch?v=nw5RLvN7fYA}
+      \end{itemize}
+  \section{Procedure}
+    \subsection{Setup (10 minutes)}
+      Cut a few sheets of white letter paper into small (about 3x3in) pieces, so there are enough for each student and 
+      each instructor to have 3 pieces. Distribute 5 full sheets of white letter paper, 1 full sheet of color paper,  
+      and 3 small pieces of white letter paper to each student. Pass around writing implements, scissors, and tape.
+    \subsection{Introduction (10 minutes)}
+      ``Today we're going to talk about infinity.''
+
+      Take a sheet of white letter paper and fold it in half. 
+
+      ``How many times can you fold a piece of paper?''
+
+      Ask each student to take 1 sheet of their white letter paper and fold it as many times as they can.
+      Go around and ask how many folds. Give them your answer -- should be around 7. 
+
+      Take the sheet of tissue paper and fold it as many times as you can. Should be more than 7. This shows how the 
+      thinner a paper is compared to its area, the more times it can be folded.
+
+      Pick up a fresh piece of white letter paper.
+      \subsubsection{Introduce little infinity}
+        ``Imagine a piece of paper so thin that you could fold it a hundred times. Imagine a piece of paper so thin that 
+        you could fold it a million times. Now, imagine a piece of paper so thin that you could keep folding it forever. 
+        That's little infinity. We would say that that paper is infinitely thin, or that its thickness is infinitesimal, 
+        meaning infinitely small.''
+
+        Pause for questions.
+      \subsubsection{Introduce big infinity}
+        ``Now let's think about the opposite, things that are really big. Imagine that we have a piece of paper that's 
+        this thick'' (hold up letter paper) ``but it's the size of this table. What about a piece of paper the size of 
+        this room? This city? This galaxy? The biggest thing you could possibly imagine? All of those papers would 
+        eventually run out of folding space, because even though they're really big, they still have limits. Now imagine 
+        a piece of paper that's this thick but goes on forever, without limits.'' (gesture to denote spreading out 
+        radially) ``That's big infinity. We would say that that paper is infinitely vast/wide, or that its area is 
+        infinite.''
+      \subsubsection{Introduce finitude}
+        ``If something isn't infinite or infinitesimal, it's finite. It has clearly defined limits. We can see the limits 
+        of this paper right here:'' (hold up letter paper and gesture to its edges and its thickness) ``Everything in the 
+        real world is finite -- if we want infinity, we look to the world of math. Sometimes it's really useful to think 
+        about, `what if we took this finite pattern and kept repeating it forever?'"
+      \subsubsection{Introduce today's activities}
+        ``Today we're going to make a few patterns and think about what it might look like if we kept repeating them 
+        forever. The two types of patterns we're going to make are called fractals and tessellations.''
+
+        Show triangle translation tessellation in Fresco.
+
+        ``Tessellations are a type of repeating pattern where elements of the pattern are next to each other.''
+
+        Show rotation and reflection tessellations in Fresco.
+
+        ``The elements might stay the same when they're repeated, or they might be rotated or flipped.''
+
+        Show Sierpinski triangle in Fresco.
+
+        ``Fractals are a type of repeating pattern where elements of the pattern are within each other. This particular 
+        fractal is called the Sierpinski triangle, named after a mathematician named Sierpinski.''
+
+        ``Both fractals and tessellations can go on repeating forever, or we can cut them off at a limit we choose. If 
+        we cut them off at a limit, the number of repetitions is called the depth of the pattern. If we never cut it 
+        off, the depth would be big infinity.''
+    \subsection{Demonstration and Guided Practice}
+      It might be helpful to split up into two groups here -- beginner and intermediate -- so the beginner students can
+      take their time and intermediate students can have a bit more time to work on the more complex art and math 
+      concepts in the Extensions section.
+      \subsubsection{Fractals}
+        Show them YouTube Video 1, demonstrating making a Sierpinski triangle with cuts in a piece of paper.
+        Follow along yourself, and have the students do the same with their second sheet of white letter paper. Pause at 
+        every step so all students can catch up. At the very end, have the students attach their color paper to the back 
+        of their creations.
+      \subsubsection{Tessellations}
+        ``In tessellations, as opposed to fractals, elements of the pattern are repeated next to each other, not inside 
+        one another. The elements might stay the same when they're repeated, or they might be rotated or flipped.''
+      
+        Show triangle tessellation in Fresco.
+      
+        Show them YouTube Video 2, demonstrating making a tessellation by translation. Follow along yourself, and have 
+        the students do the same. Pause at every step so everyone can catch up. Label your creation ``TRANSLATION'' and 
+        have the students do the same. Trace tessellation element across a whole sheet of white letter paper.
+
+        Show them YouTube Video 3, demonstrating making a tessellation by reflection. Follow along yourself, and have 
+        the students do the same. Pause at every step so everyone can catch up. Label your creation ``REFLECTION'' and 
+        have the students do the same. Trace tessellation element across a whole sheet of white letter paper.
+
+        Show them YouTube Video 4, demonstrating making a tessellation by rotation. Follow along yourself, and have 
+        the students do the same. Pause at every step so everyone can catch up. Label your creation ``ROTATION'' and 
+        have the students do the same. Trace tessellation element across a whole sheet of white letter paper.
+    \subsection{Extensions}
+      \subsubsection{Collaborative fractal drawing}
+        One student draw a big shape on a sheet of paper, another student draw another shape inside it, another draw 
+        a third inside the second, and then draw the first big shape again but smaller within the third shape. All 
+        students keep going with the repetition as small as they can. 
+      \subsubsection{Collaborative tessellation creation}
+        Students form a group and make the biggest tessellation they can together! Make a lot of copies of the same 
+        tessellation element (by tracing and cutting copies of the original element), and set them up all over the 
+        room as far as they can go.
+      \subsubsection{More complex origami fractals and tessellations}
+        Show off Verda's example origami hydrangeas and herringbone tessellations, as well as YouTube videos 
+        demonstrating how to make them (YouTube Videos 5, 6); give students origami paper and let them try their 
+        hand at making the origami fractals/tessellations to whatever depth they want.
+      \subsubsection{(Intermediate) Discrete vs. continuous}
+      \subsubsection{(Intermediate) Vector vs. pixel art}
+        Talk about how pixel art is discrete because pixels are distinct from each other and there is clear separation 
+        between them. When you zoom in enough, you can see where one pixel ends and the next one begins. Vector art, 
+        on the other hand, is continuous. You can keep zooming in (theoretically; Fresco actually limits how far you
+        can zoom) and still see a smooth line. 
+
+        Let the kids play around with Fresco. Make sure they're being gentle with the iPad. Talk about how this really
+        cool technology is created and maintained by software designers and developers. Answer questions about software 
+        design and development to the best of your ability. 
+      \subsubsection{(Advanced) Reasoning about infinity}
+        ``This paper'' (show letter papers, unfolded and folded) ``runs out of folding space because each time it's 
+        folded, it gets thicker. With the infinitely thin paper, it would have to be the case that when it's folded, 
+        it stays infinitely thin.''
+
+        Why?
+
+        ``Imagine the infinitely thin paper got thicker when you folded it. It would eventually get as thick as this 
+        paper, and by that time, its area would be a lot smaller. That means it would eventually run out of space, 
+        and we wouldn't be able to fold it anymore. If we can't fold it anymore, that means it's not infinite. This 
+        tells us that infinite folds means the paper doesn't get any thicker with each fold.''
+      \subsubsection{(Advanced) Reasoning about infinities of different sizes}
+        Talk about the Infinite Hotel Paradox 
+        (\url{https://en.wikipedia.org/wiki/Hilbert%27s_paradox_of_the_Grand_Hotel}). Consider finitely many new 
+        guests or infinitely many new guests.
+
+        Same situation as paper not getting any thicker with each fold: x = 2x if x is infinite or infinitesimal. 
+        Doesn't have to be 2: x = nx where n element of N, if x is infinite or infinitesimal. 
+
+        2 infinities are the same size if there's a 1:1 correspondence; if we can pair each element of Infinity 1 to
+        a different element of Infinity 2, and there's none left over in Infinity 2. The set of natural numbers, or 
+        ``counting numbers'', is infinite -- you can keep adding 1 and getting a new number forever. We can use this 
+        infinite set to measure the size of other infinities. If we can count each element in another infinite set 
+        using the natural numbers, then it's the same size as N. If there are other numbers that can't be counted
+        using N, then it's a bigger infinity than N. 
+
+        Draw infinities (N, Q, R) on paper to help kids visualize the process of counting them.
+      \url{https://www.businessinsider.com/the-different-sizes-of-infinity-2013-11}
+    \subsection{Conclusion and Evaluation}
+      Give the kids a chance to show the fractals and tessellations that they created.
+      \subsubsection{Exit Questions}
+      \begin{itemize}
+        \item What's another word to describe little infinity? (Hint: ``little infinity'' is a noun, but this word is an 
+          adjective)
+        \item What's another word to describe big infinity?
+        \item What do you call something that isn't infinitesimal or infinite?
+        \item Out of infinite, infinitesimal, and finite, which one(s) exist(s) in the real world?
+        \item What's the difference between a fractal and a tessellation?
+        \item What is the depth of the fractal you created? 
+        \item (Intermediate) What's the difference between discrete and continuous? 
+        \item (Intermediate) What's the difference between vector and pixel art?
+      \end{itemize}
+
+\end{document}
