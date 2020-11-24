@@ -14,7 +14,7 @@ commit_lessons() {
   rm -rf out
 
   # Add and commit all lessons
-  git add *.pdf
+  git add -A
   git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
   git checkout -b lesson-pdfs
 }
@@ -25,7 +25,7 @@ upload_lessons() {
   # on the travis server with a bot accounts PAT.
   git remote add lesson-pdfs https://${GH_TOKEN}@github.com/bits-and-bots/lessons.git > /dev/null 2>&1
   # Make sure nothing is exposed in logs
-  git push --quiet --set-upstream lesson-pdfs >/dev/null 2>&1
+  git push --quiet --set-upstream lesson-pdfs > /dev/null 2>&1
 }
 
 if [[ $TRAVIS_BRANCH == 'master' ]]
