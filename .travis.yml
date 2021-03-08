@@ -1,13 +1,14 @@
 language: generic
-
 before_install:
-  - sudo apt-get update
-  - sudo apt-get install texlive-xetex latexmk lmodern texlive-fonts-recommended
-
+- sudo apt-get update
+- sudo apt-get install texlive-xetex latexmk lmodern texlive-fonts-recommended
 script:
-  - make all 
-
+- make all
 notifications:
   slack:
     secure: bits-n-bots:1dqjI7NFiADCbSQTw4nhAGI6
-
+after_success:
+- "./push-lessons.sh"
+env:
+  global:
+    secure: qA4++0OTPy26pQrAOsOESJ4vtbHlZ+zYUCNwiXb3l+MYZkIAE5QLkuJUDom0OQ1c9mYuLIWFHinHhBw3vVmpFioBsNJ9lgWpbhCZQUKH4t3RlsRnvlylrl1jW8HPAQmKe+1WIE/MhD03y1f+vdDIv/B6SexVnPf+9fHpaDgZo1NgZ0C5/Uv7AjfmuZIjzhHHqGM6lLfJR4LqzKB1CHPGzzxsdOE/SXrtZnD73StYk8sxXF0PuWaCiDBIt5KgXuGGchCGcDkkf2kWMHt8j1sL1HEPyuQb4z+1d2P9BpgEjGTBR7xv++imuab8QdRbRHSm/xUOMH9zb3h2qQHuZwMpTVGFGbflj1nhMpyC5YKM5aqMdPrQIRWyxdJLapE3c+xivinWSw5pNjLJe7FpJ+7oF3Ng5Qe8jkcwjxDHVasRuGN+UFT247dLsCSbU0x4BN++ANZfaRE9kgU340AmFexk1vuHMSx8J9M78LjWG+alywlYNkejHz3ZqNJnqTZXw/8RDA+8PDega6GfgyAu+qJdUnrRAe4Wr8USUvACYo3y5MYNL7AgBi5uV5ntajp4shWFsLWZSRswvz0oO3TKGUmJMjTkDV1aY1GmEzIopcNDa3vwpPu04Q8DrUKzL6uoCGD0z9X/GsKKjmeEw/6JEzZd22sEpfjeAVqk17Wo1S1MAQk=
